@@ -5,6 +5,8 @@ Requires PHP: 5.6
 Requires at least: 4.6
 Tested up to: 6.4
 Stable tag: 1.0
+License: GPLv3.0
+License URI: https://www.gnu.org/licenses/agpl-3.0.html
 
 Disables the WordPress update checking and notification system for all core, plugin and theme updates.
 

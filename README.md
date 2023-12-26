@@ -1,5 +1,4 @@
-# as-disable-automatic-updates
- Disable Automatic Updates for WordPress Core, Plugins and Themes
+# Disable Automatic Updates for WordPress Core, Plugins and Themes
 
  === Disable Automatic Updates for WordPress Core, Plugins and Themes ===
 Contributors: AS Themes

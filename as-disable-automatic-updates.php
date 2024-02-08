@@ -1,4 +1,7 @@
 <?php
+
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly      
+
 /**
 * Plugin Name: AS Disable Automatic Updates
 * Plugin URI: https://360activesolution.com/as-disable-automatic-updates
@@ -16,7 +19,7 @@
 * Remove all update notifications of WordPress core, plugins and themes.
 * This function fake last checked time using __return_null
 */
-function as_dau_remove_core_updates(){
+function asdau_remove_core_updates(){
 	global $wp_version;
 	return(object) array(
 		'last_checked'=> time(),
@@ -24,9 +27,9 @@ function as_dau_remove_core_updates(){
 		'updates' => array ()
 	);
 }
-add_filter('pre_site_transient_update_core','as_dau_remove_core_updates'); //hide updates for WordPress itself
-add_filter('pre_site_transient_update_plugins','as_dau_remove_core_updates'); //hide updates for all plugins
-add_filter('pre_site_transient_update_themes','as_dau_remove_core_updates'); //hide updates for all themes
+add_filter('pre_site_transient_update_core','asdau_remove_core_updates'); //hide updates for WordPress itself
+add_filter('pre_site_transient_update_plugins','asdau_remove_core_updates'); //hide updates for all plugins
+add_filter('pre_site_transient_update_themes','asdau_remove_core_updates'); //hide updates for all themes
 
 
 // If automatic updates are enabled, it will disable all automatic updates
